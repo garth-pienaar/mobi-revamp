@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-steam-dark: #1b2838;
+  --color-steam-darker: #171a21;
+  --color-steam-blue: #1a9fff;
+  --color-steam-blue-dark: #0d7ac4;
+  --color-steam-blue-light: #66c0f4;
+  --color-steam-gray-light: #c7d5e0;
+  --color-steam-gray-medium: #8f98a0;
+}
+
+body {
+  background-color: var(--color-steam-darker);
+  color: var(--color-steam-gray-light);
+  font-family: 'Motiva Sans', 'Arial', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.steam-card {
+  background-color: var(--color-steam-dark);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(26, 159, 255, 0.2);
+  transition: all 0.3s;
+}
+
+.steam-card:hover {
+  border-color: rgba(26, 159, 255, 0.4);
+  box-shadow: 0 0 20px rgba(6, 191, 255, 0.3);
+}
+
+.steam-button {
+  background: linear-gradient(135deg, #06BFFF 0%, #2671BD 100%);
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s;
+}
+
+.steam-button:hover {
+  box-shadow: 0 0 30px rgba(6, 191, 255, 0.5);
+  transform: scale(1.05);
+}

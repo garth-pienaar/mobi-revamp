@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 
+const BASE_URL = import.meta.env.BASE_URL
+
 const slides = [
-  { id: 1, image: '/sliderImage1.png', alt: 'Promo 1' },
-  { id: 2, image: '/sliderImage2.png', alt: 'Promo 2' },
-  { id: 3, image: '/sliderImage3.png', alt: 'Promo 3' }
+  { id: 1, image: `${BASE_URL}sliderImage1.png`, alt: 'Promo 1' },
+  { id: 2, image: `${BASE_URL}sliderImage2.png`, alt: 'Promo 2' },
+  { id: 3, image: `${BASE_URL}sliderImage3.png`, alt: 'Promo 3' }
 ]
 
 export default function HeroSlider() {

@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom'
 
+const BASE_URL = import.meta.env.BASE_URL
+
 const games = [
-  { id: 1, name: 'Gates of Olympus', image: '/gates-of-olympus.jpg' },
-  { id: 2, name: '5 Lions', image: '/5-lions.jpg' },
-  { id: 3, name: '888 Dragons', image: '/888-dragons.jpg' },
-  { id: 4, name: 'Barn Festival', image: '/barn-festival.jpg' },
-  { id: 5, name: 'Game 1', image: '/gameImg1.png' },
-  { id: 6, name: 'Game 2', image: '/gameImg2.png' }
+  { id: 1, name: 'Gates of Olympus', image: `${BASE_URL}gates-of-olympus.jpg` },
+  { id: 2, name: '5 Lions', image: `${BASE_URL}5-lions.jpg` },
+  { id: 3, name: '888 Dragons', image: `${BASE_URL}888-dragons.jpg` },
+  { id: 4, name: 'Barn Festival', image: `${BASE_URL}barn-festival.jpg` },
+  { id: 5, name: 'Game 1', image: `${BASE_URL}gameImg1.png` },
+  { id: 6, name: 'Game 2', image: `${BASE_URL}gameImg2.png` }
 ]
 
 const upcomingMatches = [

@@ -3,81 +3,51 @@ import { Link } from 'react-router-dom'
 const BASE_URL = import.meta.env.BASE_URL
 
 const games = [
-  { id: 1, name: 'Gates of Olympus', image: `${BASE_URL}gates-of-olympus.jpg` },
-  { id: 2, name: '5 Lions', image: `${BASE_URL}5-lions.jpg` },
-  { id: 3, name: '888 Dragons', image: `${BASE_URL}888-dragons.jpg` },
-  { id: 4, name: 'Barn Festival', image: `${BASE_URL}barn-festival.jpg` },
-  { id: 5, name: 'Game 1', image: `${BASE_URL}gameImg1.png` },
-  { id: 6, name: 'Game 2', image: `${BASE_URL}gameImg2.png` }
+  { id: 1, name: 'Bonanza', image: 'https://static.adv.bet/casino/pragmatic-animated-icons/vs10bbbonanza.svg' },
+  { id: 2, name: 'Bonanza Dice', image: 'https://static.adv.bet/casino/pragmatic-animated-icons/vs20bnnzdice.svg' },
+  { id: 3, name: 'Portals', image: 'https://static.adv.bet/casino/pragmatic-animated-icons/vs20portals.svg' },
+  { id: 4, name: 'Congo Cash', image: 'https://static.adv.bet/casino/pragmatic-animated-icons/vs432congocash.svg' },
+  { id: 5, name: 'Madame Destiny', image: 'https://static.adv.bet/casino/pragmatic-animated-icons/vswaysmadame.svg' },
+  { id: 6, name: 'Light Wilds', image: 'https://static.adv.bet/casino/pragmatic-animated-icons/vswayslight.svg' }
 ]
 
 const upcomingMatches = [
   {
     id: 1,
-    sport: 'Football',
-    homeTeam: 'Manchester United',
-    awayTeam: 'Liverpool',
-    date: 'Dec 18, 2025',
-    time: '19:45',
-    homeOdds: '2.50',
-    drawOdds: '3.20',
-    awayOdds: '2.80'
+    title: 'Rugby',
+    description: 'Bet on international and local rugby matches',
+    image: `${BASE_URL}rugbyImage.jpg`,
+    gradient: 'from-green-600/20 to-emerald-600/20',
+    borderColor: 'border-green-500/50',
+    glowColor: 'rgba(34,197,94,0.4)',
   },
   {
     id: 2,
-    sport: 'Basketball',
-    homeTeam: 'LA Lakers',
-    awayTeam: 'Boston Celtics',
-    date: 'Dec 18, 2025',
-    time: '21:00',
-    homeOdds: '1.90',
-    drawOdds: '-',
-    awayOdds: '1.95'
+    title: 'Soccer',
+    description: 'Place bets on your favorite football teams',
+    image: `${BASE_URL}soccerImage.jpg`,
+    gradient: 'from-blue-600/20 to-cyan-600/20',
+    borderColor: 'border-blue-500/50',
+    glowColor: 'rgba(59,130,246,0.4)',
   },
   {
     id: 3,
-    sport: 'Football',
-    homeTeam: 'Real Madrid',
-    awayTeam: 'Barcelona',
-    date: 'Dec 19, 2025',
-    time: '20:00',
-    homeOdds: '2.30',
-    drawOdds: '3.10',
-    awayOdds: '3.00'
+    title: 'Aviator',
+    description: 'Take flight with multipliers up to 1000x',
+    image: `${BASE_URL}AviatorImage.jpg`,
+    gradient: 'from-purple-600/20 to-pink-600/20',
+    borderColor: 'border-purple-500/50',
+    glowColor: 'rgba(168,85,247,0.4)',
   },
   {
     id: 4,
-    sport: 'Tennis',
-    homeTeam: 'Djokovic',
-    awayTeam: 'Federer',
-    date: 'Dec 19, 2025',
-    time: '15:30',
-    homeOdds: '1.65',
-    drawOdds: '-',
-    awayOdds: '2.20'
+    title: 'F1 Racing',
+    description: 'Bet on Formula 1 races and champions',
+    image: `${BASE_URL}F1Image.jpg`,
+    gradient: 'from-red-600/20 to-orange-600/20',
+    borderColor: 'border-red-500/50',
+    glowColor: 'rgba(239,68,68,0.4)',
   },
-  {
-    id: 5,
-    sport: 'Football',
-    homeTeam: 'Bayern Munich',
-    awayTeam: 'Dortmund',
-    date: 'Dec 20, 2025',
-    time: '18:30',
-    homeOdds: '1.80',
-    drawOdds: '3.50',
-    awayOdds: '4.20'
-  },
-  {
-    id: 6,
-    sport: 'Basketball',
-    homeTeam: 'Golden State',
-    awayTeam: 'Miami Heat',
-    date: 'Dec 20, 2025',
-    time: '22:00',
-    homeOdds: '2.10',
-    drawOdds: '-',
-    awayOdds: '1.75'
-  }
 ]
 
 export default function CasinoGames() {
@@ -126,7 +96,7 @@ export default function CasinoGames() {
       <div className="mt-12">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 className="text-3xl font-bold text-white mb-2">Upcoming Matches</h2>
+            <h2 className="text-3xl font-bold text-white mb-2">Upcoming Games</h2>
             <p className="text-steam-text">Place your bets on these upcoming sports events</p>
           </div>
           <Link
@@ -137,39 +107,26 @@ export default function CasinoGames() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {upcomingMatches.map((match) => (
             <div
               key={match.id}
-              className="bg-steam-dark rounded-lg p-4 border border-steam-border hover:border-steam-blue transition-colors cursor-pointer"
+              className="group relative overflow-hidden rounded-lg bg-steam-dark hover:transform hover:scale-105 transition-all duration-300 cursor-pointer"
             >
-              <div className="flex justify-between items-center mb-3">
-                <span className="text-xs font-semibold text-steam-blue uppercase">{match.sport}</span>
-                <span className="text-xs text-steam-text">{match.date} • {match.time}</span>
-              </div>
-
-              <div className="space-y-2 mb-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-white font-medium">{match.homeTeam}</span>
-                  <span className="text-steam-text text-sm">vs</span>
-                  <span className="text-white font-medium">{match.awayTeam}</span>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-3 gap-2">
-                <div className="bg-steam-card rounded p-2 text-center hover:bg-steam-blue transition-colors">
-                  <div className="text-xs text-steam-text mb-1">Home</div>
-                  <div className="text-white font-bold">{match.homeOdds}</div>
-                </div>
-                {match.drawOdds !== '-' && (
-                  <div className="bg-steam-card rounded p-2 text-center hover:bg-steam-blue transition-colors">
-                    <div className="text-xs text-steam-text mb-1">Draw</div>
-                    <div className="text-white font-bold">{match.drawOdds}</div>
+              <div className="aspect-[4/3]">
+                <img
+                  src={match.image}
+                  alt={match.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <h3 className="text-white font-bold text-lg mb-1">{match.title}</h3>
+                    <p className="text-steam-text text-xs mb-3">{match.description}</p>
+                    <button className="w-full bg-steam-blue hover:bg-steam-blue-light text-white py-2 px-4 rounded-md text-sm font-medium transition-colors">
+                      Place Bet
+                    </button>
                   </div>
-                )}
-                <div className={`bg-steam-card rounded p-2 text-center hover:bg-steam-blue transition-colors ${match.drawOdds === '-' ? 'col-start-3' : ''}`}>
-                  <div className="text-xs text-steam-text mb-1">Away</div>
-                  <div className="text-white font-bold">{match.awayOdds}</div>
                 </div>
               </div>
             </div>

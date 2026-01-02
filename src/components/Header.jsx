@@ -18,11 +18,7 @@ const Header = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img
-              src="/interbet-revamp/interbet_mobi_logo.png"
-              alt="Interbet"
-              className="h-10"
-            />
+          
         
           </div>
 

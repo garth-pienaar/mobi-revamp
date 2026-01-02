@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-
+const BASE_URL = import.meta.env.BASE_URL
 const Header = () => {
   const location = useLocation();
 
@@ -19,13 +19,11 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img
-              src="https://interbet.co.za/Content/images/logos/png/interbet-dark-130.png"
+              src="/interbet-revamp/interbet_mobi_logo.png"
               alt="Interbet"
               className="h-10"
             />
-            <span className="text-xs text-steam-gray-medium hidden md:block px-2 py-1 bg-steam-gradient rounded">
-              REVAMPED
-            </span>
+        
           </div>
 
           {/* Search Bar */}

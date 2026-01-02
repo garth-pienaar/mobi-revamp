@@ -1,3 +1,5 @@
+const BASE_URL = import.meta.env.BASE_URL
+
 const Promotions = () => {
   const promos = [
     {
@@ -14,7 +16,7 @@ const Promotions = () => {
       id: 2,
       title: 'Soccer 6',
       description: 'Predict 6 match results and win the jackpot',
-      image: 'https://interbet.co.za/Content/images/icons-v2/soccer-6.png',
+      image: `${BASE_URL}soccer6_epl10.png`,
       gradient: 'from-green-600/20 to-emerald-600/20',
       borderColor: 'border-green-500/50',
       buttonGradient: 'from-green-500 to-emerald-500',

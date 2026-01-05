@@ -11,6 +11,7 @@ const Promotions = () => {
       borderColor: 'border-blue-500/50',
       buttonGradient: 'from-blue-500 to-cyan-500',
       glowColor: 'rgba(59,130,246,0.4)',
+      link: "https://interbet.co.za/VegasGames/Aviator",
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ const Promotions = () => {
       borderColor: 'border-green-500/50',
       buttonGradient: 'from-green-500 to-emerald-500',
       glowColor: 'rgba(34,197,94,0.4)',
+      link: "https://interbet.co.za/Soccer6",
     },
     {
       id: 3,
@@ -41,6 +43,7 @@ const Promotions = () => {
       borderColor: 'border-orange-500/50',
       buttonGradient: 'from-orange-500 to-red-500',
       glowColor: 'rgba(249,115,22,0.4)',
+      link: "https://interbet.co.za/Tote/Horses/Program?ProgramDate=1/5/2026%2012:00:00%20AM&ProgramCode=C2Q",
     },
   ];
 
@@ -72,21 +75,19 @@ const Promotions = () => {
 
             <div className="relative z-10">
               <div className="flex justify-center mb-4">
+                <a href={promo.link}>
                 <img
                   src={promo.image}
                   alt={promo.title}
                   className="h-20 w-20 object-contain"
                 />
+                </a>
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{promo.title}</h3>
               <p className="text-steam-gray-light text-sm mb-4">
                 {promo.description}
               </p>
-              <button
-                className={`w-full bg-gradient-to-r ${promo.buttonGradient} text-white font-bold py-2 rounded-lg transition-all hover:shadow-lg`}
-              >
-                PLAY NOW
-              </button>
+             
               <p className="text-xs text-steam-gray-medium mt-3 text-center">
                 T&Cs apply
               </p>

@@ -5,10 +5,10 @@ const Header = () => {
 
   const navItems = [
     { id: 'home', label: 'HOME', icon: '🏠', path: '/' },
-    { id: 'sports', label: 'SPORTS', icon: '⚽', path: '/sports' },
-    { id: 'live', label: 'LIVE BETTING', icon: '🔴', path: '/live' },
-    { id: 'casino', label: 'CASINO', icon: '🎰', path: '/casino' },
-    { id: 'promotions', label: 'PROMOTIONS', icon: '🎁', path: '/promotions' },
+    { id: 'sports', label: 'SPORTS', icon: '⚽', path: 'https://interbet.co.za/Prematch/Sportorts' },
+    { id: 'live', label: 'LIVE BETTING', icon: '🔴', path: 'https://interbet.co.za/LiveBetting' },
+    { id: 'casino', label: 'CASINO', icon: '🎰', path: 'https://interbet.co.za/VegasGames' },
+    { id: 'promotions', label: 'PROMOTIONS', icon: '🎁', path: 'https://interbet.co.za/Promotions' },
   ];
 
   return (

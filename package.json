@@ -1,9 +1,9 @@
 {
-  "name": "mobi-revamp",
+  "name": "interbet-revamp",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://garth-pienaar.github.io/mobi-revamp",
+  "homepage": "https://garth-pienaar.github.io/interbet-revamp",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

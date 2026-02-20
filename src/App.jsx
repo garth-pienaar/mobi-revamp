@@ -6,7 +6,7 @@ import Sports from './pages/Sports'
 
 function App() {
   return (
-    <Router basename="/interbet-revamp">
+    <Router basename="/mobi-revamp">
       <div className="min-h-screen bg-steam-darker">
         <Header />
         <Routes>
